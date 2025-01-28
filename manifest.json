@@ -1,0 +1,11 @@
+{ 
+"manifest_version":3,
+"name":"Extensió",
+"short_name":" extens",
+"description":"Extensió per a Facebook",
+"version":"1.0",
+"action":{
+"default_popup":"index.html"
+},
+"permissions": ["activeTab", "tabs", "scripting"]
+}
