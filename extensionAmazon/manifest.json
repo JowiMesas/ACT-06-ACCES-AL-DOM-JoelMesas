@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Extensió Amazon",
+  "short_name": " extensAmazon",
+  "description": "Extensió per a Amazon",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "host_permissions": ["https://www.amazon.es/*"],
+  "permissions": ["activeTab", "tabs", "scripting"]
+}
