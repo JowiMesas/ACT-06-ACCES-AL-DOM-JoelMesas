@@ -48,5 +48,11 @@ let min_price = document.getElementById("btn-min-price");
 min_price.addEventListener("click", clickButtonMinPrice);
 
 function clickButtonMinPrice() {
-  
+  chrome.scripting.executeScript({
+    target: { tabId: tabId },
+    func: minPriceProduct,
+  });
+}
+function minPriceProduct() {
+  const prices = document.querySelectorAll("._cDEzb_p13n-sc-price_3mJ9Z");
 }
