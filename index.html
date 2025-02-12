@@ -4,30 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Extension Facebook</title>
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/sharp-thin.css"
+    />
     <script src="index.js" defer></script>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        padding: 10px;
+        font-family: "Arial", sans-serif;
+        background-color: #f4f7fc;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+        width: 250px;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      h2 {
+        font-size: 20px;
+        color: #1877f2;
+        margin-bottom: 20px;
       }
       button {
-        display: block;
-        margin: 10px 0;
-        padding: 10px;
+        background-color: #1877f2;
+        color: white;
+        border: none;
+        padding: 12px;
         width: 100%;
+        border-radius: 5px;
         cursor: pointer;
+        margin-bottom: 12px;
+        font-size: 16px;
+        transition: background-color 0.3s, transform 0.2s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
-      input[type="color"] {
-        margin-top: 10px;
+      button:hover {
+        background-color: #005bb5;
+        transform: scale(1.05);
+      }
+      button:focus {
+        outline: none;
+      }
+      .color-picker-container {
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+      .btn-container {
+        margin-top: 20px;
       }
     </style>
   </head>
   <body>
-    <h2>Modificar Login Facebook</h2>
-    <button id="btn-bg-red">Set background color red</button>
-    <button id="links-colors">Set color links</button>
-    <input type="color" id="link-color-picker" />
-    <button id="delete-images">Delete Images</button>
-    <button id="show-passwords">Show/Hide Passwords</button>
+    <h2><i class="fa-brands fa-facebook"></i> Modificar Login Facebook</h2>
+    <div class="btn-container">
+      <button id="btn-bg-red">
+        <i class="fa-solid fa-palette"></i> Set background color red
+      </button>
+      <button id="links-colors">
+        <i class="fa-solid fa-link"></i> Set color links
+      </button>
+      <div class="color-picker-container">
+        <label for="link-color-picker" style="font-size: 14px; color: #555"
+          > <i class="fa-solid fa-arrow-pointer"></i> Choose link color:</label
+        >
+        <input type="color" id="link-color-picker" />
+      </div>
+      <button id="delete-images">
+        <i class="fa-regular fa-image-slash"></i> Delete Images
+      </button>
+      <button id="show-passwords">
+        <i class="fa-solid fa-eye-slash"></i> Show/Hide Passwords
+      </button>
+    </div>
   </body>
 </html>

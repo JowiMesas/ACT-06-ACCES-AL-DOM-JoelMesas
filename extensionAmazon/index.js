@@ -55,4 +55,22 @@ function clickButtonMinPrice() {
 }
 function minPriceProduct() {
   const prices = document.querySelectorAll("._cDEzb_p13n-sc-price_3mJ9Z");
+  let minPrice = Infinity;
+  let minPriceElement = null;
+  prices.forEach((min) => {
+    let priceText = min.textContent.replace(/[^0-9,\.]/g, "").replace(",", ".");
+    const price = parseFloat(priceText);
+    if (!isNaN(price) && price < minPrice) {
+      minPrice = price;
+      minPriceElement = min;
+    }
+  });
+  if (minPriceElement) {
+    const product = minPriceElement.closest("div");
+    if (product) {
+      product.style.border = "3px solid red";
+      product.style.backgroundColor = "#ffcccc";
+      product.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
 }
